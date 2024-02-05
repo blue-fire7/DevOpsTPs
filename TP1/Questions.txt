@@ -1,0 +1,5 @@
+Commandes : 
+docker run -p 5432:5432 --name databaseTP1 -e POSTGRES_DB=db -e POSTGRES_USER=usr -e POSTGRES_PASSWORD=pwd --network app-network gregoryspn/mydatabase
+
+1 - Why should we run the container with a flag -e to give the environment variables?
+
