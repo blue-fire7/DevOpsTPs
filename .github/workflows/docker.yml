@@ -11,7 +11,7 @@ on:
 
 jobs:
   docker-images:
-    if: ${{github.event.workflow_run.conclusion = 'success'}}
+    if: ${{github.event.workflow_run.conclusion == 'success'}}
     runs-on: ubuntu-22.04
     steps:
       #checkout your github code using actions/checkout@v2.5.0
