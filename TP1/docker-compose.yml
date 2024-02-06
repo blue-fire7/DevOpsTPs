@@ -2,9 +2,7 @@ version: '3.8'
 
 services:
   database:
-    build: ./Database
-    ports:
-      - "5432:5432"
+    image: gregoryspn/tp1-database:1.0
     volumes:
       - ./Database/data:/var/lib/postgresql/data
     environment:
@@ -15,9 +13,7 @@ services:
       - app-network
 
   backend:
-    build: ./Backend API/simpleapi/simpleapi/
-    ports:
-      - "8080:8080"
+    image: gregoryspn/tp1-backend:1.0
     networks:
       - app-network
     environment:
@@ -28,7 +24,7 @@ services:
       - database
 
   httpd:
-    build: ./HTTP Server
+    image: gregoryspn/tp1-httpd:1.0
     ports:
       - 80:80
     networks:
