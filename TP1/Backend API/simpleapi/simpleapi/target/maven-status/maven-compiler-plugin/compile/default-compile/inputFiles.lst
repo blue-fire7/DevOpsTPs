@@ -1,0 +1,10 @@
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/controller/GreetingController.java
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/controller/StudentController.java
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/dao/DepartmentDAO.java
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/entity/Student.java
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/service/StudentService.java
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/dao/StudentDAO.java
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/service/DepartmentService.java
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/controller/DepartmentController.java
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/SimpleApiApplication.java
+/mnt/c/Grégory/CPE/4IRC/DevOps/DevOpsTPs/TP1/Backend API/simpleapi/simpleapi/src/main/java/fr/takima/training/simpleapi/entity/Department.java
