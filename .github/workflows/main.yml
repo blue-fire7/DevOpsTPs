@@ -21,6 +21,9 @@ jobs:
           # on précise la même version que le Dockerfile
           java-version: '17'
 
+      - name: Login to DockerHub
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+
       - name: Build image and push backend
         uses: docker/build-push-action@v3
         with:
@@ -28,6 +31,7 @@ jobs:
           context: ./TP1/BackendAPI/simpleapi/simpleapi
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp1-backend:latest
+          push: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Build image and push database
         uses: docker/build-push-action@v3
@@ -36,6 +40,7 @@ jobs:
           context: ./TP1/Database
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp1-database:latest
+          push: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Build image and push httpd
         uses: docker/build-push-action@v3
@@ -44,6 +49,7 @@ jobs:
           context: ./TP1/HTTPServer
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp1-httpd:latest
+          push: ${{ github.ref == 'refs/heads/main' }}
 
      #finally build your app with the latest command
       - name: Build and test with Maven
