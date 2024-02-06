@@ -1,19 +1,6 @@
 version: '3.8'
 
 services:
-  backend:
-    build: ./Backend API/simpleapi/simpleapi/
-    ports:
-      - "8080:8080"
-    networks:
-      - app-network
-    environment:
-      - DB_URL=jdbc:postgresql://databaseTP1:5432/db
-      - DB_USER=usr
-      - DB_PASSWORD=pwd
-    depends_on:
-      - database
-
   database:
     build: ./Database
     ports:
@@ -26,6 +13,19 @@ services:
       - POSTGRES_PASSWORD=pwd
     networks:
       - app-network
+
+  backend:
+    build: ./Backend API/simpleapi/simpleapi/
+    ports:
+      - "8080:8080"
+    networks:
+      - app-network
+    environment:
+      - DB_URL=jdbc:postgresql://database:5432/db
+      - DB_USER=usr
+      - DB_PASSWORD=pwd
+    depends_on:
+      - database
 
   httpd:
     build: ./HTTP Server
