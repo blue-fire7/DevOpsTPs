@@ -53,4 +53,4 @@ jobs:
 
      #finally build your app with the latest command
       - name: Build and test with Maven
-        run: mvn clean verify --file ./TP1/BackendAPI/simpleapi/simpleapi/pom.xml
+        run: mvn -B verify sonar:sonar -Dsonar.projectKey=blue-fire7_DevOpsTPs -Dsonar.organization=blue-fire7 -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=${{ secrets.SONAR_TOKEN }} --file ./TP1/BackendAPI/simpleapi/simpleapi/pom.xml
