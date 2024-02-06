@@ -2,11 +2,12 @@ name: CI devops docker 2024
 on:
   #to begin you want to launch this job in main and develop
   workflow_run:
-    - "CI devops sonar 2024"
-  types:
-    - completed
-  branches:
-    - main
+    workflows:
+      - "CI devops sonar 2024"
+    types:
+      - completed
+    branches:
+      - main
 
 jobs:
   docker-images:
