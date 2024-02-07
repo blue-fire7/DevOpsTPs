@@ -32,6 +32,13 @@ services:
     depends_on:
       - backend
 
+  front:
+    image: gregoryspn/myfront:1.0
+    networks:
+      - app-network
+    depends_on:
+      - backend
+
   
 networks:
   app-network:
