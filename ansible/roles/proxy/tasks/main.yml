@@ -4,3 +4,7 @@
   docker_container:
     name: proxy
     image: gregoryspn/tp1-httpd:1.0
+    networks:
+      - name: app-network
+    ports:
+     - "80:80"

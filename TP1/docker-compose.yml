@@ -32,5 +32,6 @@ services:
     depends_on:
       - backend
 
+  
 networks:
   app-network:

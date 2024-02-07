@@ -50,3 +50,12 @@ jobs:
           # Note: tags has to be all lower-case
           tags: ${{secrets.DOCKERHUB_USERNAME}}/tp1-httpd:latest
           push: ${{ github.ref == 'refs/heads/main' }}
+
+      - name: Build image and push front
+        uses: docker/build-push-action@v3
+        with:
+          # relative path to the place where source code with Dockerfile is located
+          context: ./devops-front
+          # Note: tags has to be all lower-case
+          tags: ${{secrets.DOCKERHUB_USERNAME}}/myfront:latest
+          push: ${{ github.ref == 'refs/heads/main' }}

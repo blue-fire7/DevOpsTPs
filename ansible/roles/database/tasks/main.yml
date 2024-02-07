@@ -8,7 +8,7 @@
       - name: app-network
     volumes:
       - /data
-    environment:
+    env:
       POSTGRES_DB: db
       POSTGRES_USER: usr
       POSTGRES_PASSWORD: pwd
