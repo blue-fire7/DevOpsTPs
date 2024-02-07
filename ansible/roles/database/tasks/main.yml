@@ -1,0 +1,14 @@
+---
+# tasks file for roles/database
+- name: Run Database
+  docker_container:
+    name: database
+    image: gregoryspn/tp1-database:1.0
+    networks:
+      - name: app-network
+    volumes:
+      - /data
+    environment:
+      POSTGRES_DB: db
+      POSTGRES_USER: usr
+      POSTGRES_PASSWORD: pwd
