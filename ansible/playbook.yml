@@ -8,3 +8,5 @@
     - app
     - front
     - proxy
+  vars_files: 
+    - secrets.yml

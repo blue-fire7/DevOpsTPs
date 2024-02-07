@@ -1,0 +1,27 @@
+name: CI devops deploy 2024
+on:
+  #to begin you want to launch this job in main and develop
+  push:
+    branches: 
+      - main 
+
+jobs:
+  deploy_front: 
+    runs-on: ubuntu-22.04
+    steps:
+     #checkout your github code using actions/checkout@v2.5.0
+      - uses: actions/checkout@v2.5.0
+
+     #do the same with another action (actions/setup-java@v3) that enable to setup jdk 17
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.10.12'
+
+      - name: Install Ansible
+        run: |
+          pip install ansible
+
+      - name: Run Ansible playbook
+        run: |
+          ansible-playbook -i inventories/setup.yml playbook.yml --ask-vault-password

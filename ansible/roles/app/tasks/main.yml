@@ -9,6 +9,6 @@
     networks:
       - name: app-network
     env: 
-      DB_URL: "jdbc:postgresql://database:5432/db" 
-      DB_USER: "usr"
-      DB_PASSWORD: "pwd"
+      DB_URL: "{{db_url}}"
+      DB_USER: "{{db_user}}"
+      DB_PASSWORD: "{{db_password}}"
