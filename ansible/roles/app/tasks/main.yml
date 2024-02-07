@@ -10,3 +10,5 @@
       DB_URL: "jdbc:postgresql://database:5432/db" 
       DB_USER: "usr"
       DB_PASSWORD: "pwd"
+    recreate: true
+    pull: true

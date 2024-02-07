@@ -12,3 +12,5 @@
       POSTGRES_DB: db
       POSTGRES_USER: usr
       POSTGRES_PASSWORD: pwd
+    recreate: true
+    pull: true

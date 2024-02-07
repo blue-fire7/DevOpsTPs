@@ -8,3 +8,5 @@
       - name: app-network
     ports:
      - "80:80"
+    recreate: true
+    pull: true

@@ -6,3 +6,5 @@
     image: gregoryspn/myfront:1.0
     networks:
       - name: app-network
+    recreate: true
+    pull: true  
