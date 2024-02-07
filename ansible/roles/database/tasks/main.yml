@@ -3,7 +3,9 @@
 - name: Run Database
   community.docker.docker_container:
     name: database
-    image: gregoryspn/tp1-database:1.0
+    pull: true
+    recreate: true
+    image: gregoryspn/tp1-database:latest
     networks:
       - name: app-network
     volumes:
@@ -12,5 +14,3 @@
       POSTGRES_DB: db
       POSTGRES_USER: usr
       POSTGRES_PASSWORD: pwd
-    recreate: true
-    pull: true

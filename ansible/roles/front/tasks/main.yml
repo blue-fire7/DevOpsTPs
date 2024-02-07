@@ -3,8 +3,8 @@
 - name: Run Front
   community.docker.docker_container:
     name: front
-    image: gregoryspn/myfront:1.0
+    pull: true
+    recreate: true
+    image: gregoryspn/myfront:latest
     networks:
       - name: app-network
-    recreate: true
-    pull: true  

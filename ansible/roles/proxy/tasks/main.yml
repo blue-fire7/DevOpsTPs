@@ -3,10 +3,10 @@
 - name: Run Proxy
   community.docker.docker_container:
     name: proxy
-    image: gregoryspn/tp1-httpd:1.0
+    pull: true
+    recreate: true
+    image: gregoryspn/tp1-httpd:latest
     networks:
       - name: app-network
     ports:
      - "80:80"
-    recreate: true
-    pull: true
