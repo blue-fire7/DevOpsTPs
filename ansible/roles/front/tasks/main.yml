@@ -1,7 +1,7 @@
 ---
 # tasks file for roles/front
 - name: Run Front
-  docker_container:
+  community.docker.docker_container:
     name: front
     image: gregoryspn/myfront:1.0
     networks:
