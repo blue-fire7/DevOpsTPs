@@ -12,3 +12,16 @@
       DB_URL: "{{db_url}}"
       DB_USER: "{{db_user}}"
       DB_PASSWORD: "{{db_password}}"
+
+- name: Run App 2
+  community.docker.docker_container:
+    name: backend2
+    pull: true
+    recreate: true
+    image: gregoryspn/tp1-backend:latest
+    networks:
+      - name: app-network
+    env:
+      DB_URL: "{{db_url}}"
+      DB_USER: "{{db_user}}"
+      DB_PASSWORD: "{{db_password}}"
