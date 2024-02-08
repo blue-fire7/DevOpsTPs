@@ -13,20 +13,18 @@ jobs:
     if: ${{github.event.workflow_run.conclusion == 'success'}}
     runs-on: ubuntu-22.04
     steps:
-      #checkout your github code using actions/checkout@v2.5.0
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v2.5.0
 
-     #run ansible playbook to deploy the backend.
-      - name: Run Ansible playbook
+      - name: Run playbook
         uses: dawidd6/action-ansible-playbook@v2
         with:
-            playbook: playbook.yml
-            key: ${{secrets.SSH_PRIVATE_KEY}}
-            directory: ansible
-            inventory: |
-              [all]
-              gregory.spinar.takima.cloud
-            vault_password: ${{secrets.VAULT_PASSWORD}}
-            options: |
-              -u centos
+          playbook: playbook.yml
+          directory: ansible
+          key: ${{secrets.SSH_KEY}}
+          inventory: |
+            [all]
+            ${{ secrets.DEPLOY_HOST }}
+          vault_password: ${{ secrets.VAULT_PASSWORD }}
+          options: |
+            -u centos
