@@ -2,7 +2,7 @@ name: CI devops deploy 2024
 on:
   workflow_run:
     workflows:
-      - "CI Docker devops 2024"
+      - "CI devops docker 2024"
     types:
         - completed
     branches:
